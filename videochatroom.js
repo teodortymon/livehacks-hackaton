@@ -41,14 +41,14 @@ $(function(){
 getLocalVideo();
 
 
-function getPreviousStreams(){}
+function getPreviousStreams(){
 console.log('do we have a localstream');
 console.log(window.localStream);
 for (var i = 1; i< peer.id; i++)
 {
   call_Id(i);
 } 
- 
+}
  
 // Call/Video Management
 function getLocalVideo() {
