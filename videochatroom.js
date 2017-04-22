@@ -73,19 +73,19 @@ getLocalVideo();
 
 function getPreviousStreams(){
 console.log('do we have a localstream');
-var i = 1;
-while (keep_searching)
-{
-  call_Id(i);
-  i++;
-  if (i > peer.id + 5)
-    keep_searching = false;
-}
-// console.log(window.localStream);
-// for (var i = 1; i< peer.id; i++)
+// var i = 1;
+// while (keep_searching)
 // {
 //   call_Id(i);
-// } 
+//   i++;
+//   if (i > peer.id + 5)
+//     keep_searching = false;
+// }
+console.log(window.localStream);
+for (var i = 1; i< peer.id; i++)
+{
+  call_Id(i);
+} 
 }
  
 // Call/Video Management
