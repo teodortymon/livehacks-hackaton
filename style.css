@@ -22,3 +22,16 @@ nav img{
 	height: 60%;
 	margin: 1em;
 }
+
+#own-video-div{
+	width: 20%;
+    position: fixed;
+    margin: 2em;
+    width: 20%;
+	border: 3px solid grey;
+	border-radius: 20px;
+}
+
+#own-video{
+	border-radius: 20px;
+}

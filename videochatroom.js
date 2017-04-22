@@ -96,7 +96,7 @@ while (keep_searching)
 function getLocalVideo() {
   navigator.getUserMedia({audio: true, video: true}, function(stream){
     console.log("Local video streaming");
-    $('#videos').append("<div class='col-s12 center-align'><video id='" + peer.id + "' autoplay></video></div>");
+    $('#videos').append("<div class='col-s12 center-align own-video-div'><video id='" + peer.id + "' autoplay own-video></video></div>");
     $('#' + peer.id).prop('src', URL.createObjectURL(stream));
     window.localStream = stream;
     getPreviousStreams();
