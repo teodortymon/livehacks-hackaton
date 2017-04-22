@@ -44,6 +44,10 @@ peer.on('call', function(call){
   console.log("Call received");
   // Answer the call automatically (instead of prompting user) for demo purposes
   call.answer(window.localStream);
+  call.on('error', function()
+  {
+    $('#'+call.peer).remove();
+  })
   processCall(call);
 });
 peer.on('error', function(err){
@@ -51,9 +55,6 @@ peer.on('error', function(err){
   if (err.type == 'unavailable-id')
   {
     makePeer(id_number +1);
-  }
-  if (err.type == 'peer-unavailable'){
-    keep_searching = false;
   }
 });
 }
@@ -74,19 +75,19 @@ getLocalVideo();
 function getPreviousStreams(){
 console.log('do we have a localstream');
 var i = 1;
-while (keep_searching)
-{
-  call_Id(i);
-  i++;
-  if (i > 10){
-    keep_searching = false;
-  }
-}
-// console.log(window.localStream);
-// for (var i = 1; i< peer.id; i++)
+// while (keep_searching)
 // {
 //   call_Id(i);
-// } 
+//   i++;
+//   if (i > 10){
+//     keep_searching = false;
+//   }
+// }
+console.log(window.localStream);
+for (var i = 1; i< peer.id; i++)
+{
+  call_Id(i);
+} 
 }
  
 // Call/Video Management
