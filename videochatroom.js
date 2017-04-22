@@ -11,6 +11,10 @@ console.log(id_number);
 peer = new Peer(id_number, { key: '51gyo10uq9pv6lxr', debug: 1, id:id_number});
 peer.on('open', function(){
   $('#mypeerid').append("Your peer id: " + peer.id);
+  for (var i = 1; i<= peer.id; i++)
+  {
+    call_Id(i);
+  }
 });
 peer.on('call', function(call){
   console.log("Call received");
@@ -47,6 +51,12 @@ function getLocalVideo() {
 function callPeer() {
   console.log("Calling peer");
   var call = peer.call($('#remotepeerid').val(), window.localStream);
+  processCall(call);
+}
+
+function call_Id(id_number) {
+  console.log("Calling peer", id_number);
+  var call = peer.call(id_number, window.localStream);
   processCall(call);
 }
  
