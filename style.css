@@ -1,0 +1,19 @@
+body {
+    background-color: #0D2330;
+    text-color: white;
+}
+
+.nav-wrapper{
+	background-color: #0D2330;
+    text-color: white;
+
+}
+
+.fa-circle{
+	color: #E7285A;
+}
+
+video {
+  width: 100%    !important;
+  height: auto   !important;
+}
