@@ -40,6 +40,7 @@ $(function(){
 
 getLocalVideo();
 
+
 function getPreviousStreams(){}
 console.log('do we have a localstream');
 console.log(window.localStream);
