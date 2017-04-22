@@ -29,6 +29,7 @@ setInterval(function() {
 }, 1000);
 
 var peer;
+var keep_searching = true;
 function makePeer(id_number){
 
 console.log("TRYING TO MAKE A PEER WITH PEER NUMBER ");
@@ -51,6 +52,9 @@ peer.on('error', function(err){
   {
     makePeer(id_number +1);
   }
+  if (err.type == 'peer-unavailable'){
+    keep_searching = false;
+  }
 });
 }
 
@@ -69,11 +73,17 @@ getLocalVideo();
 
 function getPreviousStreams(){
 console.log('do we have a localstream');
-console.log(window.localStream);
-for (var i = 1; i< peer.id; i++)
+var i = 1;
+while (keep_searching)
 {
   call_Id(i);
-} 
+  i++;
+}
+// console.log(window.localStream);
+// for (var i = 1; i< peer.id; i++)
+// {
+//   call_Id(i);
+// } 
 }
  
 // Call/Video Management
