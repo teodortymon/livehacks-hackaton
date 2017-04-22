@@ -11,6 +11,7 @@ console.log(id_number);
 peer = new Peer(id_number, { key: '51gyo10uq9pv6lxr', debug: 1, id:id_number});
 peer.on('open', function(){
   $('#mypeerid').append("Your peer id: " + peer.id);
+  getLocalVideo();
   for (var i = 1; i<= peer.id; i++)
   {
     call_Id(i);
