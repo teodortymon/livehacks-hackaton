@@ -3,7 +3,7 @@
 navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
  
 // Start user
-var peer = new Peer({ key: '51gyo10uq9pv6lxr', debug: 1, secure:true});
+var peer = new Peer({ key: '51gyo10uq9pv6lxr', debug: 1});
 peer.on('open', function(){
   $('#mypeerid').append("Your peer id: " + peer.id);
 });
