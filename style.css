@@ -23,13 +23,17 @@ nav img{
 	margin: 1em;
 }
 
+nav .brand-logo i{
+	float: none;
+}
+
 #videos-background{
 	-moz-animation-duration: 1.5s;
 }
 
 #videos-background img{
 	margin-top: 10em;
-    width: 70%;
+    max-width: 70%;
     margin-left: auto;
     margin-right: auto;
 	/*background: url(assets/meanwhile-logo.svg) no-repeat center;
