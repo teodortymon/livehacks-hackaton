@@ -21,7 +21,6 @@ peer.on('call', function(call){
 });
 peer.on('error', function(err){
   console.log(err.message);
-  console.log(err.type);
   if (err.type == 'unavailable-id')
   {
     makePeer(id_number +1);
@@ -40,12 +39,15 @@ $(function(){
 });
 
 getLocalVideo();
+
+function getPreviousStreams(){}
 console.log('do we have a localstream');
 console.log(window.localStream);
 for (var i = 1; i< peer.id; i++)
 {
   call_Id(i);
 } 
+}
  
  
 // Call/Video Management
@@ -55,6 +57,8 @@ function getLocalVideo() {
     $('#videos').append("<video id='" + peer.id + "' autoplay></video>");
     $('#' + peer.id).prop('src', URL.createObjectURL(stream));
     window.localStream = stream;
+    getPreviousStreams();
+
   }, function(){ alert('Cannot connect to webcam. Allow access.') });
 }
  
