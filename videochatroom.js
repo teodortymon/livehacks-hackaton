@@ -2,8 +2,10 @@
 // Compatibility shim
 navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
  
+var peer;
+function makePeer(id_number){
 // Start user
-var peer = new Peer({ key: '51gyo10uq9pv6lxr', debug: 1});
+peer = new Peer({ key: '51gyo10uq9pv6lxr', debug: 1, id:id_number});
 peer.on('open', function(){
   $('#mypeerid').append("Your peer id: " + peer.id);
 });
@@ -15,7 +17,11 @@ peer.on('call', function(call){
 });
 peer.on('error', function(err){
   console.log(err.message);
+  makePeer(id_number +1);
 });
+}
+
+makePeer(1);
  
  
 $(function(){
