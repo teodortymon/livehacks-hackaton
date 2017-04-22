@@ -37,7 +37,9 @@ console.log(id_number);
 // Start user
 peer = new Peer(id_number, { key: '51gyo10uq9pv6lxr', debug: 1, id:id_number});
 peer.on('open', function(){
-  $('#mypeerid').append("Your peer id: " + peer.id);
+  console.log('yayyyyy');
+  getLocalVideo();
+  getPreviousStreams();
 
 });
 peer.on('call', function(call){
@@ -64,12 +66,12 @@ makePeer(1);
 
 
  
-$(function(){
-  $('#call').bind('click', callPeer);
-  getLocalVideo();
-});
+// $(function(){
+//   $('#call').bind('click', callPeer);
+//   getLocalVideo();
+// });
 
-getLocalVideo();
+// getLocalVideo();
 
 
 function getPreviousStreams(){
