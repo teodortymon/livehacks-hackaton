@@ -21,7 +21,11 @@ peer.on('call', function(call){
 });
 peer.on('error', function(err){
   console.log(err.message);
-  makePeer(id_number +1);
+  console.log(err.type);
+  if (err.type == 'unavailable-id')
+  {
+    makePeer(id_number +1);
+  }
 });
 }
 
@@ -36,7 +40,9 @@ $(function(){
 });
 
 getLocalVideo();
-for (var i = 1; i<= peer.id; i++)
+console.log('do we have a localstream');
+console.log(window.localStream);
+for (var i = 1; i< peer.id; i++)
 {
   call_Id(i);
 } 
