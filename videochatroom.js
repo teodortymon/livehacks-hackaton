@@ -1,6 +1,6 @@
 /* videochatroom.js */
 // Compatibility shim
-navigator.getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
  
 // Start user
 var peer = new Peer({ key: '51gyo10uq9pv6lxr', debug: 1});
