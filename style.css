@@ -23,7 +23,7 @@ nav img{
 	margin: 1em;
 }
 
-#own-video-div{
+.own-video-div{
 	width: 20%;
     position: fixed;
     margin: 2em;
@@ -32,6 +32,6 @@ nav img{
 	border-radius: 20px;
 }
 
-#own-video{
+.own-video{
 	border-radius: 20px;
 }
