@@ -48,7 +48,6 @@ for (var i = 1; i< peer.id; i++)
 {
   call_Id(i);
 } 
-}
  
  
 // Call/Video Management
