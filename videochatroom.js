@@ -77,19 +77,19 @@ makePeer(1);
 function getPreviousStreams(){
 console.log('do we have a localstream');
 var i = 1;
-// while (keep_searching)
-// {
-//   call_Id(i);
-//   i++;
-//   if (i > 10){
-//     keep_searching = false;
-//   }
-// }
-console.log(window.localStream);
-for (var i = 1; i< peer.id; i++)
+while (keep_searching)
 {
   call_Id(i);
-} 
+  i++;
+  if (i > 10){
+    keep_searching = false;
+  }
+}
+// console.log(window.localStream);
+// for (var i = 1; i< peer.id; i++)
+// {
+//   call_Id(i);
+// } 
 }
  
 // Call/Video Management
