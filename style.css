@@ -24,10 +24,18 @@ nav img{
 }
 
 #videos-background{
-	background: url(assets/meanwhile-logo.svg) no-repeat center;
+	-moz-animation-duration: 1.5s;
+}
+
+#videos-background img{
+	margin-top: 10em;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+	/*background: url(assets/meanwhile-logo.svg) no-repeat center;
 	height: 90%;
 	width: 80%;
-	margin: auto;
+	margin: auto;*/
 }
 
 .own-video-div{
