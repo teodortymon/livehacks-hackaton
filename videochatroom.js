@@ -125,6 +125,7 @@ function processCall(call) {
   // Wait for stream on the call, then set peer video display
   call.on('stream', function(remoteStream){
     console.log("Adding video from " + call.peer);
+    $('#videos-background').remove();
     $('#videos').append("<div class='col-s12 center-align'><video id='" + call.peer + "' autoplay></div>");
     $('#' + call.peer).prop('src', URL.createObjectURL(remoteStream));
   });

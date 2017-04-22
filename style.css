@@ -23,6 +23,13 @@ nav img{
 	margin: 1em;
 }
 
+#videos-background{
+	background: url(assets/meanwhile-logo.svg) no-repeat center;
+	height: 90%;
+	width: 80%;
+	margin: auto;
+}
+
 .own-video-div{
 	width: 20%;
     position: fixed;
