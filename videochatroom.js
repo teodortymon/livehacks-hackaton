@@ -78,8 +78,9 @@ while (keep_searching)
 {
   call_Id(i);
   i++;
-  if (i > peer.id + 5)
+  if (i > 10){
     keep_searching = false;
+  }
 }
 // console.log(window.localStream);
 // for (var i = 1; i< peer.id; i++)
