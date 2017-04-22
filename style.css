@@ -24,7 +24,7 @@ nav img{
 }
 
 nav .brand-logo i{
-	float: none;
+	float: none!important;
 }
 
 #videos-background{
